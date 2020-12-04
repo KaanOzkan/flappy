@@ -3,22 +3,11 @@
 	"tasks": [
 		{
 			"type": "cargo",
-			"subcommand": "build",
+			"command": "run",
 			"problemMatcher": [
 				"$rustc"
 			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"label": "Rust: cargo build - floppy"
-		},
-		{
-			"type": "cargo",
-			"subcommand": "run",
-			"problemMatcher": [
-				"$rustc"
-			],
+			"label": "Rust: cargo run - flappy",
 			"group": {
 				"kind": "test",
 				"isDefault": true
@@ -30,8 +19,27 @@
 				"panel": "shared",
 				"showReuseMessage": true,
 				"clear": false
+			}
+		},
+		{
+			"type": "cargo",
+			"command": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "Rust: cargo build - flappy",
+			"group": {
+				"kind": "build",
+				"isDefault": true
 			},
-			"label": "Rust: cargo run - floppy"
-		}
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
 	]
 }
